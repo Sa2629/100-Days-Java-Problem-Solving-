@@ -4,7 +4,7 @@ package Javachallenge100days.Day02;
  * Problem05
  */
 public class Problem05 {
-    // find and print sum of fibonacci series
+    // find and print sum of fibonacci series upto n terms
     public static int fibonacci(int n) {
         if (n <= 1) {
             return n;
@@ -17,12 +17,15 @@ public class Problem05 {
         // bruteforce approach
 
         int n = 10;
+        int sum = 0;
         System.out.println("Fibonacci Series up to " + n + " terms:");
 
         for (int i = 0; i < n; i++) {
-            System.out.print(fibonacci(i) + " ");
+            int currentterm = fibonacci(i);
+            System.out.print(currentterm + " ");
+            sum += currentterm;
         }
-
+        System.out.println("\n\n sum of fibonanci series upto " + n + "terms: " + sum);
     }
 }
 
